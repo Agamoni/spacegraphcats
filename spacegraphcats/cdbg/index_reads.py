@@ -103,6 +103,7 @@ def main(argv=sys.argv[1:]):
 
     idx_start = time.time()
     for record, offset in search_utils.iterate_bgzf(reader):
+        print(f"DEBUG: ${record.name}")
         n += 1
         if total_bp >= watermark:
             print(
